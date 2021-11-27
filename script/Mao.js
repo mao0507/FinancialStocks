@@ -5,7 +5,7 @@ Mao = {
         console.clear();
         console.log('分成兩個大項，有驗證功能、常用工具');
         console.log('驗證功能包含了 數字驗證、英文數字驗證、身分證驗證、Email驗證、市內電話驗證、手機格式驗證');
-        console.log('常用工具包含 取得網址參數');
+        console.log('常用工具包含 取得網址參數、post、get、將數字四捨五路到小數點後兩位、千分數');
         console.log('部分功能需引用 Jquery，請將Jquery掛載上去');
         console.log('Jquery CDN : https://code.jquery.com/jquery-3.6.0.js');
         //<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -112,30 +112,19 @@ Mao = {
     },
     //常用工具
     tools: {
-        //取得網址參數
-        GetUrlValue: function(key) {
-            let 網址參數 = {};
-            let 網址 = location.href
-            if (網址 != null || 網址 != undefined || 網址 != '') {
-                //將網址切割，保留問號以後字串，順便切除 & 
-                let 網址變數 = 網址.slice(網址.indexOf('?') + 1).split('&')
-                for (let i = 0; i < 網址變數.length; i++) {
-                    //取出片段
-                    let 切割後字串 = 網址變數[i];
-                    //將片段去除 = 符號
-                    let str = 切割後字串.split('=');
-                    //取出 Key值 跟 Value值
-                    let Key值 = str[0];
-                    let Value值 = 切割後字串.substr((Key值 + '=').length);
-                    //將Key值與Value值組合
-                    網址參數[Key值] = Value值.replace(/#/g, '');
-                }
-            }
-            //回傳
-            return 網址參數[key] ? 網址參數[key] : null;
-        },
+        /*----------------------------- ajax -----------------------------*/
         //post
         post: function(data, Path) {
+
+            if (data == null || data == undefined || data == '') {
+                console.log('缺少data參數');
+                return
+            }
+            if (Path == null || Path == undefined || Path == '') {
+                console.log('缺少Path參數');
+                return
+            }
+
             //Path 僅接受 字串
             //data 僅接受object 物件 ,也可以上傳檔案 ，但是必須要有files 此key值
             //上傳檔案必須有files 此key值
@@ -180,6 +169,10 @@ Mao = {
         },
         //get
         get: function(Path) {
+            if (Path == null || Path == undefined || Path == '') {
+                console.log('缺少Path參數');
+                return
+            }
 
             //宣告接收容器
             let resultData
@@ -205,12 +198,44 @@ Mao = {
 
             return resultData
         },
+        /*----------------------------- 取得參數 -----------------------------*/
+        //取得網址參數
+        GetUrlValue: function(key) {
+            let 網址參數 = {};
+            let 網址 = location.href
+            if (網址 != null || 網址 != undefined || 網址 != '') {
+                //將網址切割，保留問號以後字串，順便切除 & 
+                let 網址變數 = 網址.slice(網址.indexOf('?') + 1).split('&')
+                for (let i = 0; i < 網址變數.length; i++) {
+                    //取出片段
+                    let 切割後字串 = 網址變數[i];
+                    //將片段去除 = 符號
+                    let str = 切割後字串.split('=');
+                    //取出 Key值 跟 Value值
+                    let Key值 = str[0];
+                    let Value值 = 切割後字串.substr((Key值 + '=').length);
+                    //將Key值與Value值組合
+                    網址參數[Key值] = Value值.replace(/#/g, '');
+                }
+            }
+            //回傳
+            return 網址參數[key] ? 網址參數[key] : null;
+        },
+        /*----------------------------- 數字相關 -----------------------------*/
         //將數字四捨五路到小數點後兩位
         roundToTwo: function(num) {
+            if (num == null || num == undefined || num == '') {
+                console.log('缺少num參數');
+                return
+            }
             return +(Math.round(num + "e+2") + "e-2");
         },
         //千分數
         thousandComma: function(num) {
+            if (num == null || num == undefined || num == '') {
+                console.log('缺少num參數');
+                return
+            }
             var str = num.toString();
             var reg = str.indexOf(".") > -1 ? /(\d)(?=(\d{3})+\.)/g : /(\d)(?=(?:\d{3})+$)/g;
             return str.replace(reg, "$1,");
