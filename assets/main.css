@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css?family=Pacifico|Source+Sans+Pro:200,400");
+
+/* Box Model */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* html */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Body */
+
+body {
+    /* color */
+    background: #c9c9c9;
+    color: #666666;
+    /* font */
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 17pt;
+    font-weight: 200;
+    line-height: 1.65;
+}
+
+
+/* screen  480px min-width 320px */
+
+@media screen and (max-width:480px) {
+    body {
+        min-width: 320px;
+    }
+}
+
+
+/* screen 1680px font-size 13pt  */
+
+@media screen and (max-width: 1680px) {
+    body,
+    input {
+        font-size: 13pt;
+    }
+}
+
+
+/* screen 1280px font-size 12pt  */
+
+@media screen and (max-width: 1280px) {
+    body,
+    input {
+        font-size: 12pt;
+    }
+}
+
+
+/* screen 360px font-size 11pt  */
+
+@media screen and (max-width: 360px) {
+    body,
+    input {
+        font-size: 11pt;
+    }
+}
+
+
+/* header */
+
+header {
+    background-color: #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 9em 0 10em 0;
+    background-image: url("/assets/images/header.jpg");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    position: relative;
+    cursor: default;
+    color: rgba(255, 255, 255, 0.75);
+    position: relative;
+}
+
+.glass {
+    z-index: 1;
+    background: linear-gradient( 135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(3px);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+header .glass .inner {
+    margin-top: 6%;
+    color: #fff;
+}
+
+header .glass .inner h1 {
+    font-size: 4em;
+    padding: 0 0.5em 0.25em 0.5em;
+    font-weight: 200;
+}
+
+header .glass .inner p {
+    text-transform: uppercase;
+    letter-spacing: 0.325rem;
+    font-weight: 400;
+    font-size: 0.8em;
+    padding: 0 1.25em;
+}
+
+header .glass .inner small {
+    margin-top: 10px;
+    font-family: monospace, sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: gray;
+}
+
+.main {
+    width: 64em;
+    margin: 0 auto;
+    max-width: calc(100% - 4em);
+    padding: 4em 0 2em 0;
+}
+
+.content {
+    margin-bottom: 4em;
+    padding: 4em 4em 2em 4em;
+    background-color: #ffffff;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.table {
+    border: 2 solid gray;
+    text-align: center;
+    width: 100%;
+}
+
+.table tr th {
+    padding: 8px 15px;
+    border: 1px solid #d3d3d3;
+    background: #f5f5f5;
+}
+
+.table tr td {
+    padding: 8px 15px;
+    border: 1px solid #d3d3d3;
+    font-family: monospace;
+}
