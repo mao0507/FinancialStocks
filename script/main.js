@@ -14,7 +14,6 @@ var vm = new Vue({
             this['年領'] = this['月領'] * 12
             return this['年領']
         }
-
     },
     methods: {
         //取得股票資訊
