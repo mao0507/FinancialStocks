@@ -134,6 +134,88 @@ Mao = {
             //回傳
             return 網址參數[key] ? 網址參數[key] : null;
         },
+        //post
+        post: function(data, Path) {
+            //Path 僅接受 字串
+            //data 僅接受object 物件 ,也可以上傳檔案 ，但是必須要有files 此key值
+            //上傳檔案必須有files 此key值
+            //data :{  files:''}
+
+
+            //宣告接收容器
+            let resultData
+
+            //建立一個formData
+            let formData = new formData();
+            //如果有檔案
+            if (data.files) {
+                for (let i = 0; i < data.files.length; i++) {
+                    formData.append('fileupload', data.files[i])
+                }
+            }
+            //填入參數
+            formData.append('JSON_data', JSON.stringify(data));
+
+            $.ajax({
+                url: Path,
+                data: formData,
+                method: 'post',
+                cache: false,
+                processData: false,
+                contentType: false,
+                dataType: 'json',
+                success: function(result) {
+                    resultData = result;
+
+
+                },
+                error: function(e) {
+                    console.log('ajax 連接 ' + Path + ' 時發生錯誤，下列為送入變數以及回傳訊息：')
+                    console.log(data)
+                    console.log(e)
+                }
+            })
+
+            return resultData
+        },
+        //get
+        get: function(Path) {
+
+            //宣告接收容器
+            let resultData
+
+
+            $.ajax({
+                url: Path,
+                method: 'get',
+                dataType: 'json',
+                async: false,
+                success: function(result) {
+                    //console.log(result)
+                    resultData = result;
+
+                },
+                error: function(e) {
+                    console.log('ajax 連接 ' + Path + ' 時發生錯誤，下列為送入變數以及回傳訊息：')
+                    console.log(data)
+                    console.log(e)
+                }
+            });
+
+
+            return resultData
+        },
+        //將數字四捨五路到小數點後兩位
+        roundToTwo: function(num) {
+            return +(Math.round(num + "e+2") + "e-2");
+        },
+        //千分數
+        thousandComma: function(num) {
+            var str = num.toString();
+            var reg = str.indexOf(".") > -1 ? /(\d)(?=(\d{3})+\.)/g : /(\d)(?=(?:\d{3})+$)/g;
+            return str.replace(reg, "$1,");
+        }
+
     }
 
 }
