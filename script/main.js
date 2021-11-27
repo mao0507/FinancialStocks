@@ -18,7 +18,15 @@ var vm = new Vue({
     methods: {
         //取得股票資訊
         getStock() {
-            let path = '../json/data.json'
+            let local = (window.local.href.index('loaclhost') != -1)
+            let path
+            if (local) {
+                path = 'https://mao0507.github.io/FinancialStocks/data/json'
+            } else {
+                path = 'json/data.json'
+            }
+
+
             this.stock = Mao.tools.get(path)
             if (this.stock != '' || this.stock == undefined) {
                 console.log('data get work')

@@ -93,7 +93,7 @@ header {
     justify-content: center;
     flex-direction: column;
     padding: 9em 0 10em 0;
-    background-image: url("/assets/images/header.jpg");
+    background-image: url("images/header.jpg");
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center;

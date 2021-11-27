@@ -7,22 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- css reset -->
-    <link rel="stylesheet" href="/assets/CSSreset.css">
+    <link rel="stylesheet" href="assets/CSSreset.css">
     <!-- css main -->
-    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="assets/main.css">
     <!-- font-awesome-4.7.0 -->
-    <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <!-- Mao.js -->
-    <script src="/script/Mao.js"></script>
+    <script src="script/Mao.js"></script>
 
     <!-- vue.js vue2 -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
     <!-- js -->
-    <script src="/script/main.js" defer="defer"></script>
+    <script src="script/main.js" defer="defer"></script>
+
 
     <!-- title -->
     <title>每月領多少錢需存幾張金融股</title>
@@ -67,17 +68,7 @@
                         <th>需存張數</th>
                         <th>所需金額(元)</th>
                     </tr>
-                    <tr>
-                        <td>2801</td>
-                        <td>彰化銀</td>
-                        <td>17.05</td>
-                        <td>0.80</td>
-                        <td>0.54</td>
-                        <td>0.27</td>
-                        <td>0.27</td>
-                        <td>339.27</td>
-                        <td>5,784,563</td>
-                    </tr>
+
 
                     <tr v-for="item in stock">
                         <td>{{item['股票號碼']}}</td>
