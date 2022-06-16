@@ -60,10 +60,10 @@
                         <th>股號</th>
                         <th>股名</th>
                         <th>當日收盤價</th>
-                        <th class="eps">預估EPS</th>
-                        <th>預估配發股利</th>
-                        <th class="Cash_dividend">預估現金股利</th>
-                        <th class="Stock_dividend">預估股票股利</th>
+                        <!-- <th class="eps">預估EPS</th> -->
+                        <!-- <th>預估配發股利</th> -->
+                        <th class="Cash_dividend">發放現金股利</th>
+                        <th class="Stock_dividend">發放股票股利</th>
                         <th>需存張數</th>
                         <th>所需金額(元)</th>
                     </tr>
@@ -73,8 +73,8 @@
                         <td>{{item['股票號碼']}}</td>
                         <td>{{item['股票名稱']}}</td>
                         <td>{{item['股票當日收盤價']}}</td>
-                        <td class="eps">{{item['股票預估EPS']}}</td>
-                        <td>{{item['股票預計發放股利']}}</td>
+                        <!-- <td class="eps">{{item['股票預估EPS']}}</td> -->
+                        <!-- <td>{{item['股票預計發放股利']}}</td> -->
                         <td class="Cash_dividend">{{item['股票發放現金股利']}}</td>
                         <td class="Stock_dividend">{{item['股票發放股票股利']}}</td>
                         <td>{{countSheet(item['股票發放現金股利'],item['股票當日收盤價'],item['股票發放股票股利'])}}</td>
@@ -84,21 +84,26 @@
                 </table>
 
                 <div class="remark">
-                    <p><small>相關資訊皆參考 M I N 理財生活札記</small></p>
-
-                    <p><a href="https://goodideamin.com.tw/blog/post/111financialstocksyield">https://goodideamin.com.tw/blog/post/111financialstocksyield</a>
-                    </p>
+                    <p><small>股票發放現金股利、股票發放股票股利如尚未公布，則沿用去年數值為基準</small></p>
+                    <p><small>資料平日一到五皆會進行抓取更新</small></p>
+                    <!-- <p><a  href="https://goodideamin.com.tw/blog/post/111financialstocksyield">https://goodideamin.com.tw/blog/post/111financialstocksyield</a>
+                          
+                    </p> -->
                 </div>
             </section>
 
 
             <footer id="footer">
-                <ul class="icons">
+                <!-- <ul class="icons">
                     <li>
                         <a href="https://github.com/mao0507" class="icon ">
                             <i class="fa fa-github"></i></a>
                     </li>
-                </ul>
+                </ul> -->
+                <div class="icons">
+                    <a href="https://github.com/mao0507" class="icon icon--github">
+                        <i class="fa fa-github"></i></a>
+                </div>
             </footer>
         </div>
     </div>
