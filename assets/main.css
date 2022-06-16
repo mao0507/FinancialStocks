@@ -46,11 +46,13 @@ body {
         flex-wrap: wrap;
         justify-content: center;
     }
+
     .money .month label,
     .money .year label {
         font-size: 26px;
         margin: 0px 15px;
     }
+
     .table {
         font-size: 20px;
     }
@@ -64,11 +66,13 @@ body {
         flex-wrap: wrap;
         justify-content: center;
     }
+
     .money .month label,
     .money .year label {
         font-size: 24px;
         margin: 0px 10px;
     }
+
     .table {
         font-size: 16px;
     }
@@ -81,15 +85,18 @@ body {
     .content {
         padding: 3em 3em !important;
     }
+
     .money {
         flex-wrap: wrap;
         justify-content: center;
     }
+
     .money .month label,
     .money .year label {
         font-size: 20px;
         margin: 0px 5px;
     }
+
     .table {
         font-size: 14px;
     }
@@ -102,21 +109,26 @@ body {
     .content {
         padding: 2em 2em !important;
     }
+
     .money {
         flex-wrap: wrap;
         justify-content: center;
     }
+
     .money .month,
     .money.year {
         margin: 10px 0px;
     }
+
     .money .month label,
     .money .year label {
         font-size: 20px;
     }
+
     .table {
         font-size: 14px;
     }
+
     .table tr td {
         text-align: center;
     }
@@ -130,28 +142,35 @@ body {
         align-items: center;
         flex-wrap: wrap;
     }
+
     .money {
         flex-wrap: wrap;
         justify-content: center;
     }
+
     .money .month,
     .money.year {
         margin: 10px 0px;
     }
+
     .money .month label,
     .money .year label {
         font-size: 18px;
     }
+
     .money .month input,
     .money .year input {
         padding: 0 0;
     }
+
     .table {
         font-size: 14px;
     }
+
     .table tr td {
         text-align: center;
     }
+
     .eps,
     .Cash_dividend,
     .Stock_dividend {
@@ -167,39 +186,48 @@ body {
         align-items: center;
         flex-wrap: wrap;
     }
+
     .money {
         flex-wrap: wrap;
         justify-content: center;
     }
+
     .money .month,
     .money.year {
         margin: 10px 0px;
     }
+
     .money .month label,
     .money .year label {
         font-size: 16px;
     }
+
     .money .month input,
     .money .year input {
         padding: 0 0;
         height: calc(1em + 0.25rem + 1px);
         font-size: 18px;
     }
+
     .table {
         font-size: 14px;
         zoom: 0.8;
     }
+
     .table tr td {
         text-align: center;
     }
+
     .table tr th {
         padding: 4px 8px !important;
     }
+
     .eps,
     .Cash_dividend,
     .Stock_dividend {
         display: none;
     }
+
     .remark {
         font-size: 14px !important;
     }
@@ -209,6 +237,7 @@ body {
     header {
         padding: 7em 0 7em 0 !important;
     }
+
     header .glass .inner {
         display: flex;
         align-items: center;
@@ -216,61 +245,74 @@ body {
         flex-wrap: wrap;
         padding: 15%;
     }
+
     header .glass .inner h1 {
         font-size: 2em !important;
         padding: 0 0.5em 0.25em 0.5em;
         font-weight: 200;
     }
+
     .main {
-        max-width: calc(100% - 1em)!important;
-        padding: 2em 0 2em 0!important;
+        max-width: calc(100% - 1em) !important;
+        padding: 2em 0 2em 0 !important;
     }
+
     .content {
         padding: 0.5em 0.5em !important;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        margin-bottom: 1em!important;
+        margin-bottom: 1em !important;
     }
+
     .money {
         flex-wrap: wrap;
         justify-content: center;
     }
+
     .money .month,
     .money.year {
         margin: 10px 0px;
     }
+
     .money .month label,
     .money .year label {
         font-size: 16px;
     }
+
     .money .month input,
     .money .year input {
         padding: 0 0;
         height: calc(1em + 0.25rem + 1px);
         font-size: 18px;
     }
+
     .table {
         font-size: 15px;
         zoom: 0.7;
     }
+
     .table tr td {
         text-align: center;
     }
+
     .table tr th {
         padding: 4px 6px !important;
     }
+
     .eps,
     .Cash_dividend,
     .Stock_dividend {
         display: none;
     }
+
     .remark {
         font-size: 13px !important;
     }
+
     #footer {
-        margin-top: 1em!important;
+        margin-top: 1em !important;
     }
 }
 
@@ -285,11 +327,13 @@ body {
         flex-wrap: wrap;
         padding: 15%;
     }
+
     header .glass .inner h1 {
         font-size: 2em !important;
         padding: 0 0.5em 0.25em 0.5em;
         font-weight: 200;
     }
+
     .content {
         padding: 0.5em 0.5em !important;
         display: flex;
@@ -297,39 +341,48 @@ body {
         align-items: center;
         flex-wrap: wrap;
     }
+
     .money {
         flex-wrap: wrap;
         justify-content: center;
     }
+
     .money .month,
     .money.year {
         margin: 10px 0px;
     }
+
     .money .month label,
     .money .year label {
         font-size: 16px;
     }
+
     .money .month input,
     .money .year input {
         padding: 0 0;
         height: calc(1em + 0.25rem + 1px);
         font-size: 18px;
     }
+
     .table {
         font-size: 14px;
         zoom: 0.6;
     }
+
     .table tr td {
         text-align: center;
     }
+
     .table tr th {
         padding: 4px 6px !important;
     }
+
     .eps,
     .Cash_dividend,
     .Stock_dividend {
         display: none;
     }
+
     .remark {
         font-size: 12px !important;
     }
@@ -374,7 +427,7 @@ header {
 
 .glass {
     z-index: 1;
-    background: linear-gradient( 135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(3px);
     width: 100%;
@@ -499,6 +552,9 @@ header .glass .inner small {
 }
 
 
+
+
+
 /* footer */
 
 #footer {
@@ -508,4 +564,65 @@ header .glass .inner small {
 
 #footer a {
     color: inherit;
+}
+
+.icons {
+    display: flex;
+    column-gap: 25px;
+    justify-content: center;
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 26px;
+    color: #fff;
+    border-radius: 50%;
+    outline: 2px solid #fff;
+    transition-property: outline-offset, outline-color, background-color;
+    transition-duration: .25s;
+}
+
+.icon i {
+    color: #fff;
+}
+
+.icon:hover {
+    outline-offset: 4px;
+}
+
+.icon:hover i {
+    animation: shake .25s;
+}
+
+.icon--github {
+    outline-color: #fff;
+}
+
+.icon--github:hover {
+    background-color: #EF6480;
+    outline-color: #EF6480;
+}
+
+
+@keyframes shake {
+    10% {
+        transform: rotate(15deg)
+    }
+
+    20% {
+        transform: rotate(-15deg)
+    }
+
+    30% {
+        transform: rotate(15deg)
+    }
+
+    40% {
+        transform: rotate(-15deg)
+    }
 }
