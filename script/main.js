@@ -2,7 +2,7 @@ var vm = new Vue({
     el: '#app',
     data: {
         stock: '',
-        message: '110/11/30 UPDATE ',
+        message: '111/06/16 UPDATE ',
         月領: '20000',
         年領: '',
     },
