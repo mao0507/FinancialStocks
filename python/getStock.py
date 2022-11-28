@@ -5,7 +5,7 @@ import os
 
 
 # 給予富果API api_token
-api_client = HttpClient(api_token='demo')
+api_client = HttpClient(api_token='')
 #api_client = HttpClient(api_token='demo')
 
 
@@ -22,7 +22,11 @@ with open("C:/Users/User/Desktop/code/FinancialStocks/python/model.json", encodi
         # print(data[i]['股票號碼'])
         arr.append(data[i]['股票號碼'])
         stock = api_client.intraday.quote(symbolId=arr[i])
-        data[i]['股票當日收盤價'] = stock['data']['quote']['trade']['price']
+        print(stock.get('data'))
+        # 檢查是否有出現需要欄位資料
+        if stock.get('data','none') != 'none' :
+            #有欄位才修改資料
+            data[i]['股票當日收盤價'] = stock['data']['quote']['trade']['price']
 
     #print(json.dumps(data, ensure_ascii=False))
 
