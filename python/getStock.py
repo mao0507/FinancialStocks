@@ -5,7 +5,7 @@ import os
 
 
 # 給予富果API api_token
-api_client = HttpClient(api_token='')
+api_client = HttpClient(api_token='7b3446b5eccd50a19973b81014723bd3')
 #api_client = HttpClient(api_token='demo')
 
 

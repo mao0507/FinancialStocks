@@ -91,10 +91,10 @@ for i in range(len(data)):
             data[i]['股票發放股票股利'] = arr[x]['股權小計']
         # 檢查用
         # print('---')
-        #print(data[i]['股票號碼'],data[i]['股票預計發放股利'],data[i]['股票發放股票股利'] )
+        # print(data[i]['股票號碼'],data[i]['股票預計發放股利'],data[i]['股票發放股票股利'] )
         # print(arr[x]['股票編號'],arr[x]['股利小計'],arr[x]['股權小計'])
         # print('---')
-        #print(' ')
+        # print(' ')
 
 # 寫入
 file = open("C:/Users/User/Desktop/code/FinancialStocks/json/data.json",
